@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript">
+alert("Enter a valid 10 digit mobile number !!!")
+</script>
+</head>
+<meta charset="ISO-8859-1">
+<title>AddPage</title>
+<link rel="stylesheet" type="text/css" href='static\mainstyle.css'>
+
+<body>
+<form action="/addpage" method="POST">
+<header id="header">
+			<div id="logo">
+				<h1>Contact</h1>
+			</div>
+</header>
+	<nav id="nav">
+			<div class="innertube">
+				<h2>User</h2>
+				<ul>
+					<li><a href="/homepage">Home</a></li>
+					<li><a href="/addpage">Add Contact</a></li>	
+					<li><a href="/searchpage">Search Contact</a></li>
+					<li><a href="/updatepage">Update Contact</a></li>	
+					<li><a href="/deletepage">Delete Contact</a></li>
+				</ul>
+			</div>
+</nav>
+		
+            <main>
+
+<div class="tube">
+<div class="form-style-2">
+
+<div class="form-style-2-heading">Add Contact</h2></div>
+
+<label><span> Name:<font color="red">*</font></span>
+<input type="text" class="input-field" name="Name" id="name" required autofocus></label>
+
+<label><span> Number:<font color="red">*</font></span>
+<input type="number" class="input-field" name="Number" id="number" required autofocus></label>
+
+<label><span> Secondary Number:<font color="red">*</font></span>
+<input type="number" class="input-field" name="SNumber" id="snumber" required autofocus></label>
+
+<label><span> Email Id:<font color="red">*</font></span>
+<input type="email" class="input-field" name="Email" id="email" required autofocus></label>
+
+<label><span> Gender<font color="red" >*</font></span>
+<select name="Gender" id="gender" class="select-field">
+<option value="select">Select Gender</option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select></label>
+
+<div class="button">
+<input type="submit" value="Add""/>
+</label></div>
+</div>
+</div>
+</main>
+</form>
+</body>
+</html>

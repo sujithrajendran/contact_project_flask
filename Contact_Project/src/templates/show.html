@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DisplayPage</title>
+<link rel="stylesheet" type="text/css" href="static/Userprofile.css">
+</head>
+<body>
+<form action="/show" method="post" name='form'>
+<header id="header">
+			<div id="logo">
+				<h1>Contact</h1>	
+			</div>
+</header>
+
+<nav id="nav">
+			<div class="innertube">
+				<h2>User</h2>
+				<ul>
+				    <li><a href="/homepage">Home</a></li>
+					<li><a href="/addpage">Add Contact</a></li>	
+					<li><a href="/searchpage">Search Contact</a></li>
+					<li><a href="/updatepage">Update Contact</a></li>	
+					<li><a href="/deletepage">Delete Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+<main>
+{% if cont %}
+{% for i in cont %}
+<div class="tube">
+<div class="container">
+	<div class="cover-photo">
+		<div style="background-image: url('static/cover.jpg')">
+       <img src='static/profile.png' class="profile" />
+      </div>
+      <h1>
+      <div class="profile-name">
+       <span style="font-size:120%; color:#ffff80;"> {{i.name}} </div></h1>
+       </h3>
+       <h3 class="about">
+      <span style="font-size:120%; color:#ffffff;">  Mobile Number -</span>
+      <span style="font-size:120%; color:#99ffff;"> {{i.mobile_no}}
+      </span> <br>
+       </h3>
+       <h3 class="about">
+      <span style="font-size:120%; color:#ffffff;">  Secondary Number -</span>
+       <span style="font-size:120%; color:#99ffff;"> {{i.s_no}}
+      </span>
+      <br>
+       </h3>
+       <h3 class="about">
+      <span style="font-size:120%; color:#ffffff;">  EmailId-</span>
+     <span style="font-size:120%; color:#99ffff;"> {{i.email_id}}
+      </span>
+      <br>
+       </h3>
+       <h3 class="about">
+     <span style="font-size:120%; color:#ffffff;">  Gender -</span>
+      <span style="font-size:120%; color:#99ffff;"> {{i.gender}}
+      </span> 
+       </h3>
+       <br>
+ </div>
+ </div>
+ {% endfor%}
+{% else %}
+	<script>
+	alert("No contacts found")</script>
+{% endif %}
+  
+    </form>
+    </main>		
+</body>
+</html>
